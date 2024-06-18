@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_hr_employee_tree" model="ir.ui.view">
+        <field name="name">custom.hr.employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="know_as"/>
+            </field>
+        </field>
+    </record>
+</odoo>
