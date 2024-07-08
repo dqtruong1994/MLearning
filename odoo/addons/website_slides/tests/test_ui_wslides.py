@@ -116,7 +116,7 @@ class TestUi(TestUICommon):
             f"/slides/aaa-{self.channel.id}/page/1",
             f"/slides/slide/{self.channel.slide_ids[0].id}",
             f"/slides/slide/aaa-{self.channel.slide_ids[0].id}",
-            f"/slides/slide/{self.channel.slide_ids[0].id}/pdf_content",
+            f"/slides/slide/{self.channel.slide_ids[0].id}F/pdf_content",
             f"/slides/slide/aaa-{self.channel.slide_ids[0].id}/pdf_content",
         )
         for url in urls:

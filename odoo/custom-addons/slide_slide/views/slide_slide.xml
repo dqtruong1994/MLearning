@@ -1,0 +1,20 @@
+<odoo>
+    <record id="custom_view_slide_slide_form" model="ir.ui.view">
+        <field name="name">.custom.slide.slide.form</field>
+        <field name="model">slide.slide</field>
+        <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='video_url']" position="replace">
+                <field name="video_url" invisible="slide_category != 'video'" readonly="slide_category != 'video'"
+                       placeholder='e.g "www.youtube.com/watch?v=ebBez6bcSEc"'
+                       widget="url"/>
+                
+                <field name="local_video_id"
+                       invisible="slide_category != 'video'"
+                       readonly="slide_category != 'video'"
+                       placeholder='Upload your video'
+                       widget="binary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
